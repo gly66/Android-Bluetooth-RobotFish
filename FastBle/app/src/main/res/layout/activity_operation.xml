@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkblue"
+        android:title="@string/manifest"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_keep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/darkblue"
+            android:text="保持连接" />
+
+        <Button
+            android:id="@+id/btn_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/darkblue"
+            android:text="打开通知" />
+    </LinearLayout>
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="109dp"
+                android:layout_height="match_parent"
+                android:text="加速度 m/s^2    "></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" x: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_x1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" y: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_y1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" z: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_z1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="57dp"
+                android:layout_height="match_parent"
+                android:text="欧拉角 °     "
+                ></TextView>
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:text=" x: "></TextView>
+
+            <TextView
+                android:id="@+id/txt_x2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" y: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_y2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:text=" z: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_z2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="位置    m  "
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" x: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_x3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:text=" y: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_y3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" z: "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_z3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#CCCC33"
+                android:text="000.0000"></TextView>
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="原始数据      "
+                ></TextView>
+
+            <TextView
+                android:id="@+id/txt_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                ></TextView>
+
+        </TableRow>
+    </TableLayout>
+    <com.clj.blesample.XYview.XYmap
+        android:id="@+id/XYmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.clj.blesample.XYview.XYmap>
+
+
+</LinearLayout>
